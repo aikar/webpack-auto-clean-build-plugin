@@ -7,6 +7,10 @@ This plugin makes it so that when a new chunk is generated with a different file
 
 This makes your project behave very closely to webpack-dev-server, but with writing files to disk, which is much friendlier when used with other web servers.
 
+## Does not handle initial clean
+
+This plugin does not handle the initial clean. You should still use something like [CleanWebpackPlugin](https://github.com/johnagan/clean-webpack-plugin) for that.
+
 
 ## Setup
 
