@@ -33,6 +33,7 @@ WebpackAutoCleanBuildPlugin.prototype = {
 			var keys = Object.keys(assetsByChunkName);
 			for (var key in keys) {
 				if (!keys.hasOwnProperty(key)) continue;
+				key = keys[key];
 				var fileName = assetsByChunkName[key];
 				if (Array.isArray(fileName)) {
 					fileName = assetsByChunkName[key][0];
