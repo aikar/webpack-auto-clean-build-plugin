@@ -1,0 +1,21 @@
+{
+  "name": "webpack-auto-clean-build-plugin",
+  "version": "1.0.0",
+  "description": "Automatically removes previous chunk output files if the filename is not same as the new output file name.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:aikar/webpack-auto-clean-build-plugin"
+  },
+  "keywords": [
+    "webpack",
+    "watch",
+    "clean",
+    "build"
+  ],
+  "author": "Daniel Ennis <aikar@aikar.co>",
+  "license": "MIT"
+}
