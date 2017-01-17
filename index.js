@@ -1,11 +1,7 @@
 /*
  * Copyright (c) (2017) - Aikar
  *
- *  Written by Aikar <aikar@aikar.co>
- *    + Contributors (See AUTHORS)
- *
  *  http://aikar.co
- *  http://starlis.com
  *
  *  @license MIT
  *
@@ -34,9 +30,15 @@ WebpackAutoCleanBuildPlugin.prototype = {
 			});
 
 			var assetsByChunkName = stats.assetsByChunkName;
-			for (var key of Object.keys(assetsByChunkName)) {
-				var file = path.resolve(options.output.path, assetsByChunkName[key]);
-				let prevFile = self.previousFiles[key];
+			var keys = Object.keys(assetsByChunkName);
+			for (var key in keys) {
+				if (!keys.hasOwnProperty(key)) continue;
+				var fileName = assetsByChunkName[key];
+				if (Array.isArray(fileName)) {
+					fileName = assetsByChunkName[key][0];
+				}
+				var file = path.resolve(options.output.path, fileName);
+				var prevFile = self.previousFiles[key];
 				if (prevFile && prevFile != file) {
 					fs.unlink(prevFile);
 				}
