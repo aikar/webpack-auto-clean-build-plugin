@@ -1,6 +1,6 @@
 {
   "name": "webpack-auto-clean-build-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Automatically removes previous chunk output files if the filename is not same as the new output file name.",
   "main": "index.js",
   "scripts": {
