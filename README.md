@@ -1,4 +1,6 @@
 # webpack-auto-clean-build-plugin
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/aikar/webpack-auto-clean-build-plugin.svg)](https://greenkeeper.io/)
 Automatically remove old assets after each build in webpack watch mode
 
 If you use webpack in watch mode (not dev server), and use hashes in your output file name, then your build folder will quickly rack up versions of every one of your output files.
