@@ -42,7 +42,9 @@ WebpackAutoCleanBuildPlugin.prototype = {
 				var file = path.resolve(options.output.path, fileName);
 				var prevFile = self.previousFiles[key];
 				if (prevFile && prevFile != file) {
-					fs.unlink(prevFile);
+					fs.unlink(prevFile, (error) => {
+						console.log(error)
+					});
 				}
 				self.previousFiles[key] = file;
 			}
